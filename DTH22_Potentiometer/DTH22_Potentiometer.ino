@@ -18,24 +18,12 @@ void setup() {
 }
 void loop() {
   int readData = DHT.read22(dataPin); // Read the data from the sensor
-  float t = DHT.temperature; // Retrieve the temperature values
+  float t = DHT.temperature; // Retrieve the temperature values in degrees Celsius
   float h = DHT.humidity;  // Retrieve the humidity values
   
-float VALTHERMO = (THERMO / 6.388888888889);// conversion of thermostat value -> temperature
- 
-VALTHERMO = analogRead(THERMO); // read the value of the potentiometer value and store it in the variable (VALTHERMO)
-VALTHERMO = map(VALTHERMO, 0, 1023, - 10, 40); // conversion by mapping the potentiometer value for 0 = -10 degrees and 1023 = 40 degrees.
-  if (t <= VALTHERMO)//if the temperature is less than or equal to my stored value
-  {
-    digitalWrite (RELAIS, 1);// then I turn on the relay for my heating
-  }
-  else
-  {
-    digitalWrite (RELAIS, 0);
-  }
 
 //Serial.print("THERMOSTA(°)");
-Serial.print(VALTHERMO);
+Serial.print(THERMO);
 Serial.print(",");// separator
 //Serial.print("Humidite(%)");
 Serial.print(h);//Data Humidity
@@ -43,7 +31,7 @@ Serial.print(",");// separator
 //Serial.print("Temperature(°)");
 Serial.println(t);//Data Temperature
 
-curr1 = VALTHERMO;
+curr1 = THERMO;
 curr2 = t; 
 curr3 = h; 
   delay(10000); // 10 second delay.
