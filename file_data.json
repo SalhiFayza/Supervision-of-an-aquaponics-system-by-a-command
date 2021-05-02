@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "aquaponicsapp-d4dda",
+  "private_key_id": "b8a6345511501c2660d4ee5795ac08dae94ec10a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC+wVNevkvpN2Av\n1qzLFJpuRbt2bPjyE2LBOp/+gJgec9Cxv/M9avFbzMzhG5yLu/LPlBV25aBEWGUU\naJY+5nw1HnWBY6JUKgeXzQRHw5CYS1NkQe+l4cU6sVomcS3xuCWRhw/VOkgWe1tZ\nSEf5zoWZXxpGMk+Oz5yw0Om2hM/jLuK9VJCGQ8CWRn0+WyHi62bvreuTVkGfpM9n\n1xIrcOHo/MBNR7QD3Arr/MLxFdoBDNNTEdC7jaidQHS9vJXs6+4T9T/8tYmO6BIR\nZXJqTT8hmrkeqULQ/jYQyPDVuP99EL//weERFcLfaMLNNsZK9RwMa7AnfdHMv4YA\n3g5BYMELAgMBAAECggEABvy/5NclorJQYXaeN7lWes/7fbgG9AV5XZVow0+XwuEA\nXDJ1/EiMwY177iPIlTNaQcStdwB5FJsETaR5gTsiG5poOK6Ba+g3BPyrU0TUaOLn\n3nx7BPscvvlvt7uRMKrlI8wfUvLI+mg988RHcENI9rhA4+3EQKy8LM6wpB3mge5n\nV6sHQxOw8Uxec6T0EkDIKPMk7UZ/Bq6lsS1hfDzZiqFsGG86GNPaA3YZi5ykrPYT\nnnMSpgfP1BIMraXbM2qKGG3MadlKs7z4L8qo2sKSg42/6TtIT1cX3XFaeenuJVjn\nLMMegWemW1e4XegX/fh0lzyfPKBfkMWzdGou3x3AsQKBgQDeYmWi/HbVtCZ5vg66\nGoCaNF8ZRrMVlgYMjP8oz7mil1e0HbB7t07z7djrorEJP5HqdEYq2jAkAhPetsMm\nik925NUmVCZ2DXBN5+j7IwcJerrIuUy9smzF5ARn8IPcUqF0bzfouDpeQLOH3FC9\niKAMq05BkvQvdy2vCkoaBidxqQKBgQDblvmJDQPrnAz5HO5FyQ0lp8gbDA3CMGL7\nQ8ps8zcsxr1DRSPoHwrrr1IqLMg3R2zQX07pTvalkgmXndAeGLHYfF2Kq6PlxnpF\nB60nIC1axT0zEbwpNvIYm+J3cR5aSlYSjENo7KS7xFf4+HwhUnY6r8rn8+TgTEN6\nTVCcwS61kwKBgE1IFpgAcm+rrl9KbCXChgSQxKetCRksTKfZ6+ZL4fAd9g2S77ze\npCJi+qpQnINhQx0eETBdKLOqwSr5inH/SMRBm805GzCVVPzN5go4Tv69VuHge0nF\nEsXmip1wWPKdCJzE9cH7G9WbWIiTSL/FFhGxCn4BSrigCxE0WzIWB2kZAoGAWMnD\n3hGAK00uxa9X/KmdgkNEGwOVsJYl/5jaiZESFy3IqyGSsjGTFdcO7vSqhAeCTQKs\ngpOmES5qaH6r/u9XQcSPghmCrM7C85R2A+Lz08b6xuJ95WBNJXwqZsc7UaDLCrbi\nLtO4jB+IvqeicUrJeVNJRN6OBc9wXUxTsv49p7cCgYBtVdOPtU9abKGr/CZHiHg2\n3F9inzOQT+PFzviD/pI5rFvdHL/FMJ021Ryd8SrD+fydCTuV2RBR9DEFKvZt6sCP\nZudyveNK1SnA0FJsTDkZinDSJC9e/zFosx+bX1dik5nfm/5j6KAYWR1oMfOsFqS+\ncuEIi2m1y9oG9SAYuDvUCQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-42o6e@aquaponicsapp-d4dda.iam.gserviceaccount.com",
+  "client_id": "107493382089456651846",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-42o6e%40aquaponicsapp-d4dda.iam.gserviceaccount.com"
+}
