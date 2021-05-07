@@ -30,11 +30,12 @@ while True:
         print('Failed to get reading. Try again!')
         time.sleep(10)
         
-    ref.push({
+    ref.set({
         
-      'Temperature':{"Data":' %.1f °C' % temperature}, 
+        'Temperature':{"Data":' %.1f °C' % temperature}, 
         'Humidity': {"Data":' %.1f %%' % humidity}
-     })  
+     }) 
+    time.sleep(10) 
        
 
     	
