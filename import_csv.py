@@ -7,7 +7,7 @@ ser.flushInput() #input data Arduino uno
 
 with open("test_file.csv", "a", newline='') as f: #create and open the file csv
     writer = csv.writer(f, delimiter=",") # Split the string, using comma, followed by a space, as a separator
-    writer.writerow(["date", "Time","Thermosta(°)" ,"Temperature(°C)", "Humidity(%)"]) # titles for columns file excel
+    writer.writerow(["date", "Time", "Thermosta(°)" ,"Temperature(°C)", "Humidity(%)", "TemperatureEau(°C)"]) # titles for columns file excel
 
     f.close() #close file test_file.csv
     
@@ -21,7 +21,7 @@ while True:
     print(decoded_time1, decoded_time2, ser_bytes) # print date , time, and data Arduino uno
     with open("test_file.csv", "a", newline='') as f: #create and open the file csv
         writer = csv.writer(f, delimiter=",") # Split the string, using comma, followed by a space, as a separator
-        writer.writerow([decoded_time1, decoded_time2, ser_bytes[0], ser_bytes[1], ser_bytes[2]]) #writerow with seperate data, time , data1 and data2
+        writer.writerow([decoded_time1, decoded_time2, ser_bytes[0], ser_bytes[1], ser_bytes[2], ser_bytes[3]]) #writerow with seperate data, time , data1 and data2
         f.close() #close file test_file.csv
 
 

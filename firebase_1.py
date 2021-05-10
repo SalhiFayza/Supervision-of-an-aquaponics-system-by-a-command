@@ -5,7 +5,7 @@ from firebase_admin import db
 import serial
 import time 
 
-from firebase import firebase
+
 
 ser = serial.Serial("COM3", 9600)  # open serial port
 ser.flushInput()
@@ -20,12 +20,14 @@ while True:
    
     ser_bytes = ser.readline().decode().strip().split(',')
     new_ser_bytes = [float(i) for i in ser_bytes]
-    humidity = new_ser_bytes[2]
     temperature = new_ser_bytes[1]
+    humidity = new_ser_bytes[2]
+    temperatureEau =new_ser_bytes[3]
+    ph =new_ser_bytes[4]
     if humidity is not None and temperature is not None:
         time.sleep(5)
 
-        print('Temperature={0:0.1f} *C Humidity={1:0.1f} %'.format(temperature, humidity))
+        print('Temperature={0:0.1f} °C Humidity={1:0.1f} % TemperatureEau={2:0.1f} °C PH={3:0.1f}'.format(temperature, humidity, temperatureEau, ph))
     else:
         print('Failed to get reading. Try again!')
         time.sleep(10)
@@ -33,7 +35,9 @@ while True:
     ref.set({
         
         'Temperature':{"Data":' %.1f °C' % temperature}, 
-        'Humidity': {"Data":' %.1f %%' % humidity}
+        'Humidity': {"Data":' %.1f %%' % humidity},
+        'TempEau':{"Data": ' %.1f °C' % temperatureEau},
+        'PH':{"Data": ' %.1f' % ph}
      }) 
     time.sleep(10) 
        
