@@ -1,7 +1,9 @@
 import requests
 import time
 from datetime import datetime
-from twilio.rest import Client
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
 import RPi.GPIO as GPIO
 from RPi.GPIO import OutputDevice
 
@@ -9,17 +11,14 @@ GPIO_pin1 = 18 #Fan NUM 1
 GPIO_pin2 = 17 #Fan NUM 2
 GPIO_pin3 = 19 #cylinder
 
+cred = credentials.Certificate('file_data.json')
+
+firebase_admin.initialize_app(cred,{'databaseURL': "https://aquaponicsapp-d4dda-default-rtdb.firebaseio.com/"})
+ref = db.reference('Meassage')
 def send():
-    account_sid = 'AC6e6dd50f69693d0f751d12bb51fa7fcc'
-    auth_token = 'e9cfb0fb09ddf78a74c45b960ac3e758'
-    client = Client(account_sid, auth_token)
-    message = client.messages \
-        .create(
-        body="A problem has been occurred for aquaponics  temperature .{}".format(temp()),#alert msg
-        from_='+14155238886',
-        to='+21692848602'
-    )
-    print(message.sid)
+    ref.set({"A problem has occurred with aquaponics temperature."})
+    
+    
 # get temperature "File Excel"
 def temp():
     try:
@@ -54,8 +53,9 @@ while True:
       OutputDevice(GPIO_pin1).on()
     elif (temp() >30) :
       OutputDevice(GPIO_pin2).on()
+    elif(temp()>30 & today()<30): 
+        OutputDevice(GPIO_pin3).on()
     else:
         send()
-        OutputDevice(GPIO_pin3).on()
     # 60*15 min = 900 seconde 
     time.sleep(900)
