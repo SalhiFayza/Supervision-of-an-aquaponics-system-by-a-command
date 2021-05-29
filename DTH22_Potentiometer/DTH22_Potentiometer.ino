@@ -4,10 +4,8 @@
 
 #include <DallasTemperature.h>
 #define tempEau A0 
-#include <dht.h>
-
 #include <dht.h>  // This is a library for the DHT series of low cost temperature / humidity sensors.
-#define dataPin 8 // Define the pin number to which the sensor is connected.
+#define dataPin A1 // Define the pin number to which the sensor is connected.
 #define DHTTYPE DHT22  // we call the dht22 sensor in the library
 dht DHT ;
 #define SensorPin A0          // the pH meter Analog output is connected with the Arduino’s Analog
@@ -20,18 +18,14 @@ int buf[10],temp;
 
 OneWire oneWire(tempEau); 
 DallasTemperature sensors(&oneWire);
-int RELAIS = 10; // declaration of PIN 10 for the relay
-float THERMO = A0; // declaration of the potentiometer
-int curr1, curr2, curr3, curr4, curr5;
+
+int  curr0, curr1, curr2, curr3;
 
 
 
 void setup() {
   Serial.begin(9600);  // Open serial port, set data rate to 9600 bps.
-  pinMode (THERMO, INPUT);
-  pinMode (RELAIS, OUTPUT);
-   pinMode(13,OUTPUT); 
-   //Serial.println("Welcome To Our Aquaponics:");
+
 
 }
 void loop() {
@@ -65,9 +59,7 @@ void loop() {
   phValue=3.5*phValue; 
 
 
-//Serial.print("THERMOSTA(°)");
-Serial.print(THERMO);
-Serial.print(",");// separator
+
 //Serial.print("Humidite(%)");
 Serial.print(h);//Data Humidity
 Serial.print(",");// separator
@@ -83,10 +75,10 @@ Serial.println(phValue,2);
 digitalWrite(13, HIGH);       
 delay(800);
 digitalWrite(13, LOW); 
-curr1 = THERMO;
-curr2 = t; 
-curr3 = h; 
-curr4 = dTempWater;
-curr5 = phValue;
+
+curr0 = h; 
+curr1 = t; 
+curr2 = dTempWater;
+curr3 = phValue;
   delay(10000); // 10 second delay.
 }

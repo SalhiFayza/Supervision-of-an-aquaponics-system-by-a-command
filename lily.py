@@ -5,7 +5,7 @@ from  datetime import date
 import pyttsx3
 import pywhatkit
 import time
-from twilio.rest import Client
+
 import datetime
 #Create a class named person (Une classe est comme un constructeur d'objet, ou un "plan" pour créer des objets.)
 class person: 
@@ -152,7 +152,7 @@ while True:
 
     person_obj = person()
 #print('How can I help you?')
-#mariya_speak('hy, How can I help you?')
+#lily_speak('hy, How can I help you?')
 
 
 
