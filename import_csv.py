@@ -40,4 +40,4 @@ while True:
                          ser_bytes[2], ser_bytes[3]])  # writerow with seperate data, time , data1 and data2
         f.close()  # close file test_file.csv
     # 1h for sleep
-    time.sleep(10)
+    time.sleep(900)

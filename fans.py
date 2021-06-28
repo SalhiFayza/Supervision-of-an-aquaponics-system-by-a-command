@@ -2,6 +2,8 @@ import requests
 import time
 from datetime import datetime
 import serial
+from firebase import firebase
+
 #import RPi.GPIO as GPIO
 #from RPi.GPIO import OutputDevice
 import pandas as pd
@@ -73,7 +75,10 @@ def today():
 
 
 while True:
-    if (temp() > 40) :
+    aa = firebase.FirebaseApplication(
+                        'https://aquaponicsapp-d4dda-default-rtdb.firebaseio.com/', None)
+    Result = aa.get('/temp/', 'data', '')
+    if (temp() > int(Result)) :
       #OutputDevice(GPIO_pin1).on()
     #elif (temp() >30) :
       #OutputDevice(GPIO_pin2).on()
