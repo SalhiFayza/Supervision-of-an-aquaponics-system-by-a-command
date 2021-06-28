@@ -1,14 +1,11 @@
 #include <OneWire.h>
-
-#include <OneWire.h>
-
 #include <DallasTemperature.h>
 #define tempEau A0 
 #include <dht.h>  // This is a library for the DHT series of low cost temperature / humidity sensors.
 #define dataPin A1 // Define the pin number to which the sensor is connected.
 #define DHTTYPE DHT22  // we call the dht22 sensor in the library
 dht DHT ;
-#define SensorPin A0          // the pH meter Analog output is connected with the Arduino’s Analog
+#define SensorPin A2          // the pH meter Analog output is connected with the Arduino’s Analog
 unsigned long int avgValue;  //Store the average value of the sensor feedback( float b)
 float b;
 int buf[10],temp;
@@ -70,7 +67,7 @@ Serial.print(",");
 Serial.print(dTempWater);
 //Serial.print("    pH:");
  Serial.print(",");
-Serial.println(phValue,2);
+ Serial.println(phValue,2);
 
 digitalWrite(13, HIGH);       
 delay(800);

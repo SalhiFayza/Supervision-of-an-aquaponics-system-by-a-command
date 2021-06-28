@@ -73,7 +73,7 @@ def today():
 
 
 while True:
-    if (temp() > 20) :
+    if (temp() > 40) :
       #OutputDevice(GPIO_pin1).on()
     #elif (temp() >30) :
       #OutputDevice(GPIO_pin2).on()

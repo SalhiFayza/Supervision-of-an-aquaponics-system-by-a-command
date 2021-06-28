@@ -5,14 +5,14 @@ from  datetime import date
 import pyttsx3
 import pywhatkit
 import time
-
 import datetime
+
 #Create a class named person (Une classe est comme un constructeur d'objet, ou un "plan" pour créer des objets.)
 class person: 
     name = ''  #Create variable
 #The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
     def setName(self, name): #use the setName() function to assign value for name 
-        self.name = name
+         self.name = name
 
 #function to test vocal terms exists "True"
 def there_exists(terms):

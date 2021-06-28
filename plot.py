@@ -19,7 +19,7 @@ current_date_and_time = datetime.today().strftime('%Y-%m-%d')
 current_date_and_time_string = str(current_date_and_time)
 file_name = current_date_and_time_string + ".csv"
 
-
+image_name = current_date_and_time_string + ".svg"
 def read():
     I020 = [ line.strip('\n').split(",") for line in open(file_name)][1:]
     Time = [datetime.strptime(line[1],"%H:%M:%S") for line in I020]
@@ -30,13 +30,13 @@ def read():
     ph = [float(line[5]) for line in I020]
 
     plt.figure(1)
-    plt.suptitle('$Data\ For\ Aquaponics$', size=20)
+    plt.suptitle('$Data\ For\ Aquaponics$', size=13)
 #Plot temperature
     x0 = Time
     y0 = temp
     plt.subplot(221)
     plt.plot(x0,y0)
-    plt.title("Temperature(°C)", size=16)
+    plt.title("Temperature(°C)", size=10)
     mplcyberpunk.add_glow_effects()
     
     plt.xticks(rotation=30)
@@ -44,7 +44,7 @@ def read():
     x1 = Time
     y1 = humy
     plt.subplot(222)
-    plt.title("Humidity(%)", size=16)
+    plt.title("Humidity(%)", size=10)
     plt.plot(x1,y1)
     mplcyberpunk.add_glow_effects()
     plt.xticks(rotation=30)
@@ -53,7 +53,7 @@ def read():
     x3 = Time
     y3 = Water
     plt.subplot(223)
-    plt.xlabel("WaterTemp(°C)", size=16)
+    plt.xlabel("WaterTemp(°C)", size=10)
     plt.plot(x3,y3)
     
     mplcyberpunk.add_glow_effects()
@@ -64,10 +64,11 @@ def read():
     plt.subplot(224)
     plt.plot(x4,y4)
     plt.xticks(rotation=30)
-    plt.xlabel("pH", size=16)
+    plt.xlabel("pH", size=10)
     mplcyberpunk.add_glow_effects()
+    msg1=plt.savefig(image_name,bbox_inches = "tight")
+    plt.show()
     
-    msg1 =plt.show()
     
     try:
         sender_address = 'farahbenlassoued1@gmail.com'
