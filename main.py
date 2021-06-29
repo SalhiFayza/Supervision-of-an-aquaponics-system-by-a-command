@@ -1,5 +1,5 @@
 import os
-#hwka simple just zid start whwa tay5dmlik li tehb alih 
+
 
 banner = """
 
@@ -18,5 +18,5 @@ print (banner)
 os.system("start python chartsmail.py")
 os.system("start python lily.py")
 os.system("start python fans.py")
-os.system("start python import_csv.py")
-os.system("start python firebase_1.py")
+#os.system("start python import_csv.py")
+os.system("start python csv_firebase.py")
