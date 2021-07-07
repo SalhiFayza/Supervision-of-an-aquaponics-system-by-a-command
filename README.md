@@ -43,6 +43,10 @@
     ![image](https://user-images.githubusercontent.com/60444937/124831934-d2744380-df73-11eb-8a4f-a3ee471d28d9.png)
           
   - PH sensor (Pro SKU SEN0169):  
+**************************************************
+- All senser Test(Arduino):
+
+![kjhbv](https://user-images.githubusercontent.com/60444937/124835283-fd14cb00-df78-11eb-8e73-6225deb36b44.PNG)
 
 **************************************************
 - Connect your Carte Arduino to a carte Raspberry pi 3 B+ with a USB Cable.
