@@ -32,7 +32,7 @@
        
    ![image](https://user-images.githubusercontent.com/60444937/124831492-334f4c00-df73-11eb-924e-2ffed7fe72ee.png)
        
-  - Water temperature sensor (DS18B20):
+  - Water temperature sensor (DS18B20) (5s):
       
     Water temperature sensor test result on boiling water:
           
@@ -42,7 +42,16 @@
           
     ![image](https://user-images.githubusercontent.com/60444937/124831934-d2744380-df73-11eb-8a4f-a3ee471d28d9.png)
           
-          
+  - PH sensor (Pro SKU SEN0169):  
+
+**************************************************
+- Realization of the voice assistant
+To fully understand the ins and outs, it is important to understand the basics that make up a voice assistant. To do this, we divide this operation into 4 main steps: 
+     - The capture of the voice.
+     - Converting voice to text.
+     - Natural Language Understanding (NLU).
+     - Text To Speech.
+![image](https://user-images.githubusercontent.com/60444937/124832593-c6d54c80-df74-11eb-9c60-fca0e76247e5.png)
        
 
 
