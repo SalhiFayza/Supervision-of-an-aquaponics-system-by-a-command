@@ -1,5 +1,5 @@
 # Supervision of an aquaponics system by a command
-# USING 
+# USING:
 **************
 - VSCode.
 - Arduino.
@@ -51,8 +51,9 @@ To fully understand the ins and outs, it is important to understand the basics t
      - Converting voice to text.
      - Natural Language Understanding (NLU).
      - Text To Speech.
-     
+* How the voice assistant works    
 ![image](https://user-images.githubusercontent.com/60444937/124832593-c6d54c80-df74-11eb-9c60-fca0e76247e5.png)
-       
+
+
 
 
