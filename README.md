@@ -27,7 +27,7 @@
 ![image](https://user-images.githubusercontent.com/60444937/124829742-ec605700-df70-11eb-83a0-f8d185b2d21b.png)
  
  *******************************************
-* Test:
+* Sensor test:
   - DHT22 (5s):
        
    ![image](https://user-images.githubusercontent.com/60444937/124831492-334f4c00-df73-11eb-924e-2ffed7fe72ee.png)
@@ -45,6 +45,28 @@
   - PH sensor (Pro SKU SEN0169):  
 
 **************************************************
+- Connect your Carte Arduino to a carte Raspberry pi 3 B+ with a USB Cable.
+- Install Python 3.9 in Raspberry pi 3 B+.
+- Install Arduino in Raspberry pi 3 B+.
+- Install VSCode in Raspberry pi 3B+.
+- Create Python code to save DHT22 data in an excel file.
+- Every day (24H) save a new excel file.
+**************************************************
+- Create file Excel:
+
+![cykhvn](https://user-images.githubusercontent.com/60444937/124834003-ec635580-df76-11eb-9af6-7498f22d59b6.PNG)
+
+**************************************************
+- Send Data to Firebase:
+
+![pokjhbv](https://user-images.githubusercontent.com/60444937/124834238-511eb000-df77-11eb-9773-56b2d4d4011e.PNG)
+
+**************************************************
+- Send Data to  ile Excel and Firebases:
+
+![999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999](https://user-images.githubusercontent.com/60444937/124834342-7dd2c780-df77-11eb-9cc5-8d2ae761654d.PNG)
+
+**************************************************
 - Realization of the voice assistant
 To fully understand the ins and outs, it is important to understand the basics that make up a voice assistant. To do this, we divide this operation into 4 main steps: 
      - The capture of the voice.
@@ -53,6 +75,20 @@ To fully understand the ins and outs, it is important to understand the basics t
      - Text To Speech.
 * How the voice assistant works    
 ![image](https://user-images.githubusercontent.com/60444937/124832593-c6d54c80-df74-11eb-9c60-fca0e76247e5.png)
+***************************************************
+* Sensor test voice assistant(Dependencies):
+Voice Commands:
+- What is your name?
+- What time is it?
+- What date for today?
+- What is the temperature value?
+- What is the humidity value?
+- What is the weather in?
+- What is the pH in?
+- Play music "YouTube"
+
+![image](https://user-images.githubusercontent.com/60444937/124833434-1405ee00-df76-11eb-9821-8a2ad56b16e5.png)
+
 
 
 
