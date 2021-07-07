@@ -12,8 +12,9 @@
 - Capture the humidity using DHT22.
 - Water temperature sensor (DS18B20):
 ![image](https://user-images.githubusercontent.com/60444937/124829388-7825b380-df70-11eb-8ddd-3eb5a3e93f22.png)
-- PH sensor (Pro SKU SEN0169).
+- PH sensor (Pro SKU SEN0169):
 ![image](https://user-images.githubusercontent.com/60444937/124829681-ce92f200-df70-11eb-9262-ff809b3c52ce.png)
 -  2 Fans.
 -  Verin.
--  Relay a 4.
+-  Relay a 4:
+![image](https://user-images.githubusercontent.com/60444937/124829742-ec605700-df70-11eb-83a0-f8d185b2d21b.png)
