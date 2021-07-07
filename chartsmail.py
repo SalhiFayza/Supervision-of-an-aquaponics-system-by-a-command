@@ -4,22 +4,25 @@ from datetime import datetime
 import smtplib
 import cufflinks as cf
 import datetime
+from datetime import time
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-# since i'm geek and lazy i want to make ur life easy too so i get username of windows directly
-#bref any problem contact me
+import time
+
 import os
 username = os.getlogin()
 
-current_date_and_time = datetime.datetime.now().strftime('%Y-%m-%d')
+current_date_and_time1 =datetime.datetime.now() - datetime.timedelta(days=1)#date yesterday 1
+current_date_and_time=current_date_and_time1.strftime('%Y-%m-%d')#date yesterday 1
 current_date_and_time_string = str(current_date_and_time)
+#print('',current_date_and_time) to display console
 file_name = current_date_and_time_string + ".csv"
 
 
-def read():
+while True:
     I020 = [line.strip('\n').split(",") for line in open(file_name)][1:]
 
     Time = [datetime.datetime.strptime(line[1], "%H:%M:%S") for line in I020]
@@ -78,7 +81,7 @@ def read():
     figs = cf.subplots([fig1, fig2, fig3, fig4], shape=(2, 2))
     figs['layout'].update(height=630, width=1350, title='Data For Aquaponics')
     plotly.offline.plot(figs,
-                        filename='C:/Users/'+username+'/Desktop/update.html', show_link=False)
+                        filename='C:/Users/'+username+'/Supervision-of-an-aquaponics-system-by-a-command/update.html', show_link=False)
     try:
         sender_address = 'farahbenlassoued1@gmail.com'
         sender_pass = 'farahtaz2020'
@@ -94,7 +97,7 @@ def read():
 
         # open the file to be sent
         filename = "Update OF Courbes.html"
-        attachment = open("C:/Users/"+username+"/Desktop/update.html", "rb")
+        attachment = open("C:/Users/"+username+"/Supervision-of-an-aquaponics-system-by-a-command/update.html", "rb")
 
         p = MIMEBase('application', 'octet-stream')
 
@@ -115,4 +118,4 @@ def read():
     except:
         print("Smtp Have Problem")
 
-read()
+    time.sleep(3600)

@@ -6,7 +6,7 @@ import pyttsx3
 import pywhatkit
 import time
 import datetime
-
+from datetime import datetime
 #Create a class named person (Une classe est comme un constructeur d'objet, ou un "plan" pour créer des objets.)
 class person: 
     name = ''  #Create variable
@@ -30,19 +30,29 @@ engine.setProperty('voice', voices[1].id)
 def lily_speak(text):
     engine.say(text)
     engine.runAndWait()
-
-# check thermostat
-def thermostat():
+# check pH
+def potential_hydrogen():
     current_date_and_time = datetime.today().strftime('%Y-%m-%d')
     current_date_and_time_string = str(current_date_and_time)
     file_name = current_date_and_time_string + ".csv"
     with open(file_name, "r", encoding="utf-8", errors="ignore") as scraped:
         final_line = scraped.readlines()[-1]
-        final_line = final_line.split(',')[2]
-        lily_speak('Thermosta is ' + final_line)
+        final_line = final_line.split(',')[5]
+        lily_speak('pH is ' + final_line)
+    return final_line
+# check thermostat
+def WaterTemp():
+    current_date_and_time = datetime.today().strftime('%Y-%m-%d')
+    current_date_and_time_string = str(current_date_and_time)
+    file_name = current_date_and_time_string + ".csv"
+
+    with open(file_name, "r", encoding="utf-8", errors="ignore") as scraped:
+        final_line = scraped.readlines()[-1]
+        final_line = final_line.split(',')[4]
+        lily_speak('Water Temperature is ' + final_line)
     return final_line
 
-# check tem
+# check temp
 def temp():
     current_date_and_time = datetime.today().strftime('%Y-%m-%d')
     current_date_and_time_string = str(current_date_and_time)
@@ -50,6 +60,7 @@ def temp():
     with open(file_name, "r", encoding="utf-8", errors="ignore") as scraped:
         final_line = scraped.readlines()[-1]
         final_line = final_line.split(',')[3]
+       
         lily_speak('The Temperature is ' + final_line)
     return final_line
 
@@ -60,8 +71,8 @@ def hmudity():
     file_name = current_date_and_time_string + ".csv"
     with open(file_name, "r", encoding="utf-8", errors="ignore") as scraped:
         final_line = scraped.readlines()[-1]
-        final_line = final_line.split(',')[4]
-        lily_speak('Thermosta is ' + final_line)
+        final_line = final_line.split(',')[2]
+        lily_speak('Hmudity is ' + final_line)
     return final_line
 # if you want to change wake up word
 WAKE = "wake up"
@@ -117,19 +128,27 @@ while True:
         date = date.today().strftime('%m %d, %Y')
         lily_speak(date)
 
-    # 6: Thermosta     
-    if there_exists(["Thermosta"]): 
-        tmt= thermostat()   
+    # 6: Temperature     
+    if there_exists(["temperature"]): 
+        tmt= temp()  
+        print('',tmt) 
         lily_speak("the is" + tmt)
 
-    # 7: Temperature     
-    if there_exists(["Temperature"]): 
-        tmp= temp()   
-        lily_speak("the is" + tmp)
 
+# 6: Thermosta     
+    if there_exists(["potential hydrogen"]): 
+        phh= ph()   
+        print('',phh)
+        lily_speak("the is" + phh)
+    # 7: Temperature     
+    if there_exists(["water temp"]): 
+        tmp= WaterTemp()   
+        print('',tmp)
+        lily_speak("the is" + tmp)
     # 8: Humidity
-    if there_exists(["Humidity"]): 
-        hmy= hmudity()   
+    if there_exists(["humidity"]): 
+        hmy= hmudity() 
+        print('',hmy) 
         lily_speak("the is" + hmy) 
     # 9: search google
     if there_exists(["search for"]) and 'youtube' not in voice_data:

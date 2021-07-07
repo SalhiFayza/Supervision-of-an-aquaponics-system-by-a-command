@@ -23,7 +23,7 @@ image_name = current_date_and_time_string + ".svg"
 def read():
     I020 = [ line.strip('\n').split(",") for line in open(file_name)][1:]
     Time = [datetime.strptime(line[1],"%H:%M:%S") for line in I020]
-    
+   
     temp = [float(line[3]) for line in I020]
     humy = [float(line[2]) for line in I020]
     Water = [float(line[4]) for line in I020]
