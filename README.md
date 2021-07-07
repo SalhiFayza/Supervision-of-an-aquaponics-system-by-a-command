@@ -101,3 +101,6 @@ Voice Commands:
 
 ![rrr](https://user-images.githubusercontent.com/60444937/124834618-fcc80000-df77-11eb-8f93-b937403cbdfe.PNG)
 
+*************************************************
+- For run all program:
+main.py
