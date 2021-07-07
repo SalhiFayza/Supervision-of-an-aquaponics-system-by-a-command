@@ -28,19 +28,19 @@
  
  *******************************************
 * Test:
-      - DHT22 (5s):
+  - DHT22 (5s):
        
-       ![image](https://user-images.githubusercontent.com/60444937/124831492-334f4c00-df73-11eb-924e-2ffed7fe72ee.png)
+   ![image](https://user-images.githubusercontent.com/60444937/124831492-334f4c00-df73-11eb-924e-2ffed7fe72ee.png)
        
-      - Water temperature sensor (DS18B20):
+  - Water temperature sensor (DS18B20):
       
-          Water temperature sensor test result on boiling water:
+    Water temperature sensor test result on boiling water:
           
-          ![image](https://user-images.githubusercontent.com/60444937/124831827-ac4ea380-df73-11eb-8b74-596b9a3b8b6c.png)
+    ![image](https://user-images.githubusercontent.com/60444937/124831827-ac4ea380-df73-11eb-8b74-596b9a3b8b6c.png)
           
-          Water temperature sensor test result on melted ice water:
+    Water temperature sensor test result on melted ice water:
           
-          ![image](https://user-images.githubusercontent.com/60444937/124831934-d2744380-df73-11eb-8a4f-a3ee471d28d9.png)
+    ![image](https://user-images.githubusercontent.com/60444937/124831934-d2744380-df73-11eb-8a4f-a3ee471d28d9.png)
           
           
        
