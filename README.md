@@ -89,7 +89,15 @@ Voice Commands:
 
 ![image](https://user-images.githubusercontent.com/60444937/124833434-1405ee00-df76-11eb-9821-8a2ad56b16e5.png)
 
+************************************************
+- Every day (24H) send rapport to Gmail(Data Aquaponics).
 
+![qwscxfd](https://user-images.githubusercontent.com/60444937/124834522-d73af680-df77-11eb-9654-7fdae164edaa.PNG)
 
+![ml;ujtghb](https://user-images.githubusercontent.com/60444937/124834502-d013e880-df77-11eb-93c6-51eb564adc6b.PNG)
 
+***********************************************
+- Send Mail when the temperature is > a temperature normal:
+
+![rrr](https://user-images.githubusercontent.com/60444937/124834618-fcc80000-df77-11eb-8f93-b937403cbdfe.PNG)
 
