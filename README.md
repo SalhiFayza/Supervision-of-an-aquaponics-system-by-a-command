@@ -45,6 +45,7 @@
   - PH sensor (Pro SKU SEN0169):  
 **************************************************
 - All senser Test(Arduino):
+@ DTH22_Potentiometer/DTH22_Potentiometer.ino
 
 ![kjhbv](https://user-images.githubusercontent.com/60444937/124835283-fd14cb00-df78-11eb-8e73-6225deb36b44.PNG)
 
@@ -56,6 +57,7 @@
 - Create Python code to save DHT22 data in an excel file.
 - Every day (24H) save a new excel file.
 **************************************************
+* import_csv.py(For send data to Excel and Firebase).
 - Create file Excel:
 
 ![cykhvn](https://user-images.githubusercontent.com/60444937/124834003-ec635580-df76-11eb-9af6-7498f22d59b6.PNG)
