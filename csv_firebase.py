@@ -20,7 +20,7 @@ ser.flushInput()
 ser_bytes = ser.readline().decode().strip().split(',')  # use split(',') to seperate ser_byte string to list
 cred = credentials.Certificate('file_data.json')
 
-firebase_admin.initialize_app(cred,{'databaseURL': "https://aquaponicsapp-d4dda-default-rtdb.firebaseio.com/"})
+firebase_admin.initialize_app(cred,{'databaseURL': "*****************************"})
 ref = db.reference('DATA')
 
     
